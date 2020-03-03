@@ -1,0 +1,136 @@
+/* Base styles */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 1rem;
+    font-family: 'Open Sans';
+}
+body * {
+    box-sizing: border-box;
+ }
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    text-transform: capitalize;
+}
+ul, p {
+    margin: 0;
+    padding: 0;
+}
+p {
+    line-height: 1.5;
+}
+a {
+    text-decoration: none;
+    transition: opacity .15s ease-in-out;
+    font-weight: 600;
+    color: inherit;
+}
+a:hover {
+    opacity: .60;
+}
+img {
+    width: 100%;
+}
+/* Layout styles */
+.container {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 1200px;
+}
+.portfolio-columns {
+    margin-bottom: 10px;;
+}
+/* Blocks */
+.nav {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    position: fixed;
+    background: white;
+    width: 100%;
+}
+.nav__logo-wrapper, .nav__list-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.nav__logo {
+    max-width: 200px;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+.nav__list {
+    display: flex;
+    list-style: none;
+}
+.nav__list-item {
+    padding: 5px;
+}
+.header {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f0/Brooklyn_Bridge_Postdlf.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: overlay;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__content {
+    color: white;
+}
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 120px;
+}
+.portfolio__item {
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.18);
+    padding: 75px 25px;
+}
+.portfolio__heading {
+    text-align: center;
+    margin: 0;
+}
+.portfolio__heading--active {
+    color: #3564b5;
+}
+@media (min-width: 775px) {
+    /* Base */
+    body {
+        font-size: 1.125rem;
+    }
+    a {
+        font-size: 1rem;
+    }
+    /* Layout styles */
+    .portfolio-columns {
+        width: 33.33%;
+    }
+    /* Block */    
+    .nav {
+        flex-direction: row;
+        padding: 10px 30px;
+    }
+    .nav__logo-wrapper, .nav__list-wrapper {
+        width: 50%;
+    }
+    .nav__logo-wrapper {
+        justify-content: flex-start;
+    }
+    .nav__logo {
+        margin-bottom: 0;
+    }
+    .nav__list-wrapper {
+        justify-content: flex-end;
+    }
+    .portfolio {
+        flex-direction: row;
+    }
+    .portfolio__item {
+        margin:20px 10px;
+    }
+}
